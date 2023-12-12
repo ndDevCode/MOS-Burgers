@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nadeesha Dassanayake" />
+    <meta name="copyright" content="MOS Burgers" />
+
+    <meta
+      name="description"
+      content="Indulge your taste buds at our burger shop in Panadura, Sri Lanka, 
+        where culinary delights await! Explore a diverse menu featuring mouthwatering burgers, 
+        delectable submarines, flavorful pasta, refreshing beverages, crispy fries, and succulent chicken. 
+        Savor the perfect blend of flavors in every bite at our culinary haven."
+    />
+
+    <meta
+      name="keywords"
+      content="Burger shop Panadura, Sri Lanka, diverse menu, burgers, submarines, pasta, beverages, fries, 
+        chicken, culinary delights, flavor-packed, food variety, tasty treats, mouthwatering bites, delicious combinations, 
+        Panadura dining, food lovers paradise."
+    />
+
+    <title>MOS Burgers</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body class="bg-layer">
+    <div class="container-fluid position-relative">
+      <!-- Left and Right Slider-->
+
+      <div
+        id="left-slider"
+        class="z-2 animate-div animate__slideOutUp animate__delay-5s"
+      ></div>
+      <div
+        id="right-slider"
+        class="z-2 animate-div animate__slideOutDown animate__delay-5s"
+      ></div>
+
+      <!-- Navbar Component -->
+
+      <div class="container-lg position-relative z-3 bg-transparent pt-2">
+        <div class="row">
+          <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+              <a id="brand-name" class="navbar-brand" href="#">MOS Burgers</a>
+
+              <button
+                class="navbar-btn navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul
+                  class="navbar-nav me-auto mb-2 mb-lg-0 w-50 d-flex justify-content-end"
+                >
+                  <li class="nav-item d-flex justify-content-end">
+                    <button
+                      class="btn btn-dark bg-transparent border-0"
+                      data-bs-target="#customer-profile-model"
+                      data-bs-toggle="modal"
+                    >
+                      <p class="nav-link navbar-item mb-0">Register</p>
+                    </button>
+                  </li>
+                  <li class="nav-item d-flex justify-content-end">
+                    <button
+                      class="btn btn-dark bg-transparent border-0"
+                      data-bs-target="#loginModel"
+                      data-bs-toggle="modal"
+                    >
+                      <p class="nav-link navbar-item mb-0">Login</p>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Site Slogan and Home page Details -->
+
+      <div
+        class="container-lg position-relative z-2 animate-div animate__zoomOutDown animate__delay-3s"
+      >
+        <div class="row position-relative z-3">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <p id="left-intro-text" class="">Welcome to MOS Burgers</p>
+            <p id="left-sub-text" class="">
+              Where taste meets delicious
+              <br />
+              <br />
+              #1 Fast Food Restaurant in Panadura
+            </p>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-12 order-lg-1 order-md-1 order-sm-2 col-sm-12 d-flex flex-column justify-content-center align-items-center"
+          >
+            <img
+              id="homepage-burger"
+              class="ratio ratio-1x1 img-fluid order-sm-2"
+              src="assets/images/homepage-img.png"
+              alt="A picture of a Burger with double patty and cheese"
+            />
+            <button
+              id="btn-order-now"
+              type="button"
+              class="btn btn-lg rounded-5 p-1 order-sm-1 order-lg-2 animate__bounce animate__delay-1s"
+            >
+              Order Now
+            </button>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 order-lg-2 col-sm-12 h-100 d-flex flex-column"
+          >
+            <p id="right-menu-title">Our Menu</p>
+            <ul class="ps-0" id="right-menu-list">
+              <li># Burgers</li>
+              <li># Submarines</li>
+              <li># Pasta</li>
+              <li># Fries</li>
+              <li># Chicken</li>
+              <li># Beverages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Place Order View -->
+
+      <div id="place-order-view" class="place-order-container container-fluid z-1 min-vh-100 d-none">
+        <div class="container-lg">
+          <div class="row w-100 h-100">
+            <div class="col-lg-8 col-md-12">
+              <div
+                id="place-order-category-header"
+                class="place-order-category-header"
+              >
+                <div id="category-item-container">
+                  <div>
+                    <p>Burgers</p>
+                  </div>
+                  <div>
+                    <p>Submarines</p>
+                  </div>
+                  <div>
+                    <p>Pasta</p>
+                  </div>
+                  <div>
+                    <p>Fries</p>
+                  </div>
+                  <div>
+                    <p>Chicken</p>
+                  </div>
+                  <div>
+                    <p>Beverages</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="item-container"
+                class="item-container container-fluid mt-2 d-flex flex-column"
+              >
+                <div id="item-searchbar-container" class="input-group mb-3">
+                  <input
+                    id="txt-item-search"
+                    type="text"
+                    class="form-control"
+                    placeholder="Search by Item Name"
+                    aria-label="Search by Item Name"
+                    aria-describedby="icon-search"
+                  />
+                  <span class="input-group-text" id="icon-search">
+                    <img src="assets/icons/search.svg" alt="serach Icon" />
+                  </span>
+                </div>
+
+                <div
+                  id="item-card-container"
+                  class="d-flex flex-wrap overflow-scroll pb-3"
+                >
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                  <div class="item-card position-relative">
+                    <div id="item-image">
+                      <img
+                        class="img-fluid"
+                        src="assets/images/item.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div id="item-name">
+                      <p>Cheese Chicken Burger</p>
+                    </div>
+                    <div id="item-size">
+                      <p>Medium Portion</p>
+                    </div>
+                    <div id="item-discount">
+                      <p>20 % Discount</p>
+                    </div>
+                    <div id="item-price">
+                      <p>Rs 1250.00</p>
+                    </div>
+                    <div><button id="btn-item-add" type="button"></button></div>
+                    <div
+                      id="item-code-container"
+                      class="bg-white rounded-start-2 position-absolute"
+                    >
+                      <p id="item-code">B001</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+              <button
+                id="cart-toggler"
+                class="btn btn-dark d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#responsive-cart"
+                aria-controls="responsive-cart"
+              >
+                <img
+                  class="fluid"
+                  src="assets/icons/cart.svg"
+                  alt="cart icon"
+                />
+              </button>
+
+              <div
+                class="offcanvas-lg offcanvas-end"
+                tabindex="-1"
+                id="responsive-cart"
+                aria-labelledby="responsive-cart-header"
+              >
+                <div class="offcanvas-header d-flex justify-content-end">
+                  <div
+                    id="cart-header"
+                    class="offcanvas-title d-flex justify-content-between align-items-center p-2 w-100"
+                  >
+                    <div class="pt-2">
+                      <h4>Order Items</h4>
+                      <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning"
+                      >
+                        3
+                        <span class="visually-hidden">Added Items</span>
+                      </span>
+                    </div>
+                    <img src="assets/icons/cart.svg" alt="cart icon" />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close d-lg-none"
+                    data-bs-dismiss="offcanvas"
+                    data-bs-target="#responsive-cart"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div
+                  class="offcanvas-body ps-2 pe-2 d-flex flex-column align-content-between h-100"
+                >
+                  <div
+                    id="cart-item-container"
+                    class="d-flex flex-column row-gap-2 h-50 w-100 pe-4 pt-2"
+                  >
+                    <div id="cart-item" class="container">
+                      <div class="row">
+                        <div class="col-8 d-flex align-items-center">
+                          <h4 id="cart-item-name">
+                            Double Cheese Crispy Chicken Burger
+                          </h4>
+                        </div>
+                        <div class="col-4 position-relative">
+                          <h5 id="cart-item-price">Rs <span>1250</span></h5>
+                          <div class="d-flex">
+                            <button id="btn-minus" type="button"></button>
+                            <h5 id="cart-item-qty">2</h5>
+                            <button id="btn-plus" type="button"></button>
+                          </div>
+                          <button
+                            id="btn-item-delete"
+                            type="button"
+                            class="btn-close position-absolute translate-middle rounded-pill"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="cart-item" class="container">
+                      <div class="row">
+                        <div class="col-8 d-flex align-items-center">
+                          <h4 id="cart-item-name">
+                            Double Cheese Crispy Chicken Burger
+                          </h4>
+                        </div>
+                        <div class="col-4 position-relative">
+                          <h5 id="cart-item-price">Rs <span>1250</span></h5>
+                          <div class="d-flex">
+                            <button id="btn-minus" type="button"></button>
+                            <h5 id="cart-item-qty">2</h5>
+                            <button id="btn-plus" type="button"></button>
+                          </div>
+                          <button
+                            id="btn-item-delete"
+                            type="button"
+                            class="btn-close position-absolute translate-middle rounded-pill"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="cart-item" class="container">
+                      <div class="row">
+                        <div class="col-8 d-flex align-items-center">
+                          <h4 id="cart-item-name">
+                            Double Cheese Crispy Chicken Burger
+                          </h4>
+                        </div>
+                        <div class="col-4 position-relative">
+                          <h5 id="cart-item-price">Rs <span>1250</span></h5>
+                          <div class="d-flex">
+                            <button id="btn-minus" type="button"></button>
+                            <h5 id="cart-item-qty">2</h5>
+                            <button id="btn-plus" type="button"></button>
+                          </div>
+                          <button
+                            id="btn-item-delete"
+                            type="button"
+                            class="btn-close position-absolute translate-middle rounded-pill"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="cart-item" class="container">
+                      <div class="row">
+                        <div class="col-8 d-flex align-items-center">
+                          <h4 id="cart-item-name">
+                            Double Cheese Crispy Chicken Burger
+                          </h4>
+                        </div>
+                        <div class="col-4 position-relative">
+                          <h5 id="cart-item-price">Rs <span>1250</span></h5>
+                          <div class="d-flex">
+                            <button id="btn-minus" type="button"></button>
+                            <h5 id="cart-item-qty">2</h5>
+                            <button id="btn-plus" type="button"></button>
+                          </div>
+                          <button
+                            id="btn-item-delete"
+                            type="button"
+                            class="btn-close position-absolute translate-middle rounded-pill"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-50 pt-1 me-2 ms-2">
+                    <div id="cart-coupon" class="rounded-pill">
+                      <div class="input-group mb-1 rounded-pill p-1">
+                        <input
+                          type="text"
+                          class="form-control rounded-pill"
+                          placeholder="Enter Coupon Code"
+                          aria-label="Coupon"
+                          aria-describedby="Coupon-code"
+                        />
+                        <button
+                          class="btn btn-outline-secondary rounded-pill ms-3"
+                          type="button"
+                          id="btn-add-coupon"
+                        >
+                          Add
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      id="cart-billing"
+                      class="d-flex flex-column justify-content-between"
+                    >
+                      <div
+                        id="bill-details"
+                        class="d-flex justify-content-between mt-3"
+                      >
+                        <div>
+                          <p class="ms-2">Subtotal</p>
+                          <p class="ms-2">Discount</p>
+                          <p class="ms-2">Total</p>
+                        </div>
+
+                        <div class="ms-5">
+                          <p>Rs</p>
+                          <p>Rs</p>
+                          <p>Rs</p>
+                        </div>
+
+                        <div class="me-2">
+                          <p>5250</p>
+                          <p>500</p>
+                          <p>4750</p>
+                        </div>
+                      </div>
+
+                      <button
+                        class="btn btn-dark rounded-pill ms-2 me-2 mb-3"
+                        type="button"
+                        id="btn-place-order"
+                      >
+                        Place Order
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Model View -->
+
+    <div
+      class="modal fade"
+      id="registerModel"
+      aria-hidden="true"
+      aria-labelledby="registerModelLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div id="register-form-model" class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button
+              id="btn-close-register"
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body vh-100">
+            <div
+              class="container d-flex align-items-center justify-content-center"
+            >
+              <div
+                id="register-form"
+                class="col d-flex flex-column justify-content-center align-items-center"
+              >
+                <h2>Register as Customer</h2>
+
+                <form
+                  action=""
+                  class="row gy-2 gx-3 align-items-center m-4 needs-validation"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Name</p>
+                    <input type="text" class="rounded-pill p-2 w-75" required />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Contact No</p>
+                    <input
+                      type="number"
+                      class="rounded-pill p-2 w-75"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Email</p>
+                    <input type="email" class="rounded-pill p-2 w-75" />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Address</p>
+                    <input type="text" class="rounded-pill p-2 w-75" required />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Birthday</p>
+                    <input type="date" class="rounded-pill p-2 w-75" />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Password</p>
+                    <input
+                      type="password"
+                      class="rounded-pill p-2 w-75"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="btn-clear-form"
+                      type="button"
+                      class="btn btn-danger rounded-pill m-2"
+                    >
+                      Clear
+                    </button>
+                    <button
+                      id="btn-register-form"
+                      type="submit"
+                      class="btn btn-success rounded-pill m-2"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Model View -->
+    <div
+      class="modal fade"
+      id="loginModel"
+      aria-hidden="true"
+      aria-labelledby="loginModelLabel"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div id="login-form-model" class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body vh-100">
+            <div
+              class="container d-flex align-items-center justify-content-center"
+            >
+              <div
+                id="login-form"
+                class="col d-flex flex-column align-items-center justify-content-center"
+              >
+                <h2>Login</h2>
+                <form
+                  action=""
+                  class="row gy-2 gx-3 align-items-center m-4 needs-validation"
+                >
+                  <div class="d-flex align-items-center justify-content-end">
+                    <div class="form-check me-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="user-type"
+                        id="rd-customer"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Customer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="user-type"
+                        id="rd-admin"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Admin
+                      </label>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Email</p>
+                    <input type="email" class="rounded-pill p-2 w-75" />
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
+                  >
+                    <p class="mb-0 ms-1">Password</p>
+                    <input
+                      type="password"
+                      class="rounded-pill p-2 w-75"
+                      required
+                    />
+                  </div>
+
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="btn-clear-login"
+                      type="button"
+                      class="btn btn-danger rounded-pill m-2"
+                    >
+                      Clear
+                    </button>
+                    <button
+                      id="btn-login-form"
+                      type="submit"
+                      class="btn btn-success rounded-pill m-2"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Profile Section -->
+    <div
+      class="modal fade"
+      id="customer-profile-model"
+      aria-hidden="true"
+      aria-labelledby="customer-profileLabel"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div id="customer-model-section" class="modal-content">
+          <div class="modal-body vh-100 bg-layer">
+            <div class="modal-header border-bottom-0">
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="container-lg">
+              <div class="row w-100 h-100">
+                <div class="col-lg-8 col-md-12">
+                  <div
+                    id="order-container"
+                    class="item-container container-fluid mt-2 d-flex flex-column"
+                  >
+                    <div id="order-searchbar-container" class="d-flex align-items-center justify-content-between bg-black rounded-pill mt-3">
+                      <h5 class="order-container-title">All Orders</h5>
+                      <div class="input-group w-50">
+                        <input
+                          id="order-search"
+                          type="text"
+                          class="form-control"
+                          placeholder="Search by Order Id"
+                          aria-label="Search by Order Id"
+                          aria-describedby="icon-search"
+                        />
+                        <span class="input-group-text p-1" id="order-search-icon">
+                          <img
+                            class="img-fluid"
+                            src="assets/icons/search.svg"
+                            alt="serach Icon"
+                          />
+                        </span>
+                      </div>
+                    </div>
+
+                    <div
+                      id="item-card-container"
+                      class="d-flex flex-wrap overflow-scroll pb-3"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                  <button
+                    id="profile-toggler"
+                    class="btn btn-dark d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#responsive-profile"
+                    aria-controls="responsive-profile"
+                  >
+                    <img
+                      class="fluid"
+                      src="assets/icons/profile.svg"
+                      alt="cart icon"
+                    />
+                  </button>
+
+                  <div
+                    class="offcanvas-lg offcanvas-end"
+                    tabindex="-1"
+                    id="responsive-profile"
+                    aria-labelledby="responsive-cart-header"
+                  >
+                    <div class="offcanvas-header d-flex justify-content-end">
+                      <div
+                        id="profile-header"
+                        class="offcanvas-title d-flex justify-content-between align-items-center p-2 w-100"
+                      >
+                        <div class="bg-black rounded-pill w-100">
+                          <h4 class="order-container-title">Customer Profile</h4>
+                        </div>
+                        
+                      </div>
+                      <button
+                        type="button"
+                        class="btn-close d-lg-none"
+                        data-bs-dismiss="offcanvas"
+                        data-bs-target="#responsive-profile"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div
+                      class="offcanvas-body ps-2 pe-2 d-flex flex-column align-content-between h-100"
+                    >
+                      <div
+                        id="profile-item-container"
+                        class="d-flex flex-column row-gap-2 h-50 w-100 pe-4 pt-2"
+                      >
+                        
+                      </div>
+                      <div class="h-50 pt-1 me-2 ms-2">
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
