@@ -238,6 +238,7 @@ body::-webkit-scrollbar{
   scrollbar-width: none;
   min-height: 500px;
   border-radius: 15px;
+  scrollbar-width: none;
 }
 
 #item-card-container::-webkit-scrollbar{
