@@ -1,98 +1,116 @@
-@media (max-width:390px) {
-    #brand-name {
-        font-size: 1.25rem;
-    }
+@media (max-width: 390px) {
+  #brand-name {
+    font-size: 1.25rem;
+  }
 
-    #right-menu-title,
-    #left-intro-text {
-        font-size: 2rem;
-        text-align: center;
-        padding: 0%;
-    }
+  #right-menu-title,
+  #left-intro-text {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0%;
+  }
 
-    #left-sub-text,
-    #right-menu-list li {
-        font-size: 1rem;
-        text-align: center;
-    }
+  #left-sub-text,
+  #right-menu-list li {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-    .navbar-item {
-        font-size: 1rem;
-    }
+  .navbar-item {
+    font-size: 1rem;
+  }
 
-    #right-menu-title {
-        margin-top: 0;
-    }
+  #right-menu-title {
+    margin-top: 0;
+  }
 }
 
-@media (max-width:765px) {
-    #right-menu-title {
-        margin-top: 0;
-    }
+@media (max-width: 765px) {
+  #right-menu-title {
+    margin-top: 0;
+  }
 
-    #right-menu-title,
-    #left-intro-text {
-        font-size: 2rem;
-        padding: 0%;
-        text-align: center;
-    }
+  #right-menu-title,
+  #left-intro-text {
+    font-size: 2rem;
+    padding: 0%;
+    text-align: center;
+  }
 
-    #left-sub-text,
-    #right-menu-list li {
-        font-size: 1rem;
-        text-align: center;
-    }
+  #left-sub-text,
+  #right-menu-list li {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-    #navbarToggler ul {
-        background-color: rgba(31, 28, 28, 0.716);
-        margin-top: 0.25rem;
-        border-radius: 1rem;
-        padding-right: 1rem !important;
-    }
+  #navbarToggler ul {
+    background-color: rgba(31, 28, 28, 0.716);
+    margin-top: 0.25rem;
+    border-radius: 1rem;
+    padding-right: 1rem !important;
+  }
 
-    #navbarToggler ul li p {
-        color: azure !important;
-    }
+  #navbarToggler ul li p {
+    color: azure !important;
+  }
 
-    #navbarToggler ul li p:hover {
-        color: rgb(133, 135, 135) !important;
-    }
-
+  #navbarToggler ul li p:hover {
+    color: rgb(133, 135, 135) !important;
+  }
 }
 
-@media (max-width:991px) {
-    #right-menu-title {
-        margin-top: 0;
-    }
+@media (max-width: 990px) {
+  #right-menu-title {
+    margin-top: 0;
+  }
 
-    #btn-order-now {
-        scale: 0.8;
-        margin-bottom: 2rem;
-        order: 1;
-    }
+  #btn-order-now {
+    scale: 0.8;
+    margin-bottom: 2rem;
+    order: 1;
+  }
 
-    #homepage-burger {
-        width: auto;
-        height: 25rem;
-    }
+  #homepage-burger {
+    width: auto;
+    height: 25rem;
+  }
 
-    #item-searchbar-container {
-        width: 100% !important;
-    }
+  #item-searchbar-container {
+    width: 100% !important;
+  }
 
-    #responsive-cart {
-        margin-top: 5rem;
-        margin-bottom: 0.6rem;
-        border-radius: 2rem 0 0 2rem;
-    }
+  #responsive-cart {
+    margin-top: 5rem;
+    margin-bottom: 0.6rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+
+  #responsive-profile {
+    height: 77%;
+  }
 }
 
-@media (min-width:1200px) {
-    #right-menu-title {
-        margin-top: 7rem;
-    }
+@media (min-width: 990px) {
+  #left-slider,
+  #right-slider {
+    height: 100dvh !important;
+  }
 
-    #item-searchbar-container {
-        width: 50% !important;
-    }
+  #landing-info-container {
+    height: 80dvh !important;
+  }
+
+  #responsive-profile{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #right-menu-title {
+    margin-top: 7rem;
+  }
+
+  #item-searchbar-container {
+    width: 50% !important;
+  }
 }
