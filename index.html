@@ -29,8 +29,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -43,9 +43,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script defer src="js/home.js" type="module"></script>
-
-    <!-- <script defer src="js/itemModel.js"></script> -->
+    <script defer src="assets/js/home.js" type="module"></script>
   </head>
 
   <body class="bg-layer">
@@ -83,7 +81,10 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
 
-              <div class="collapse navbar-collapse" id="navbarToggler">
+              <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarToggler"
+              >
                 <ul
                   class="navbar-nav me-auto mb-2 mb-lg-0 w-50 d-flex justify-content-end"
                 >
@@ -332,7 +333,6 @@
                       </div>
 
                       <button
-                        onclick="location.href='https:/www.google.com'"
                         class="btn btn-dark rounded-pill ms-2 me-2 mb-3"
                         type="button"
                         id="btn-place-order"
@@ -389,13 +389,19 @@
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Name</p>
-                    <input type="text" class="rounded-pill p-2 w-75" required />
+                    <input
+                      id="txt-customer-name"
+                      type="text"
+                      class="rounded-pill p-2 w-75"
+                      required
+                    />
                   </div>
                   <div
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Contact No</p>
                     <input
+                      id="txt-customer-contact"
                       type="number"
                       class="rounded-pill p-2 w-75"
                       required
@@ -405,25 +411,39 @@
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Email</p>
-                    <input type="email" class="rounded-pill p-2 w-75" />
+                    <input
+                      id="txt-customer-email"
+                      type="email"
+                      class="rounded-pill p-2 w-75"
+                    />
                   </div>
                   <div
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Address</p>
-                    <input type="text" class="rounded-pill p-2 w-75" required />
+                    <input
+                      id="txt-customer-address"
+                      type="text"
+                      class="rounded-pill p-2 w-75"
+                      required
+                    />
                   </div>
                   <div
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Birthday</p>
-                    <input type="date" class="rounded-pill p-2 w-75" />
+                    <input
+                      id="txt-customer-birthday"
+                      type="date"
+                      class="rounded-pill p-2 w-75"
+                    />
                   </div>
                   <div
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Password</p>
                     <input
+                      id="txt-customer-password"
                       type="password"
                       class="rounded-pill p-2 w-75"
                       required
@@ -439,7 +459,7 @@
                     </button>
                     <button
                       id="btn-register-form"
-                      type="submit"
+                      type="button"
                       class="btn btn-success rounded-pill m-2"
                     >
                       Register
@@ -469,6 +489,7 @@
         <div id="login-form-model" class="modal-content">
           <div class="modal-header border-bottom-0">
             <button
+              id="btn-loginmodal-close"
               type="button"
               class="btn-close btn-close-white"
               data-bs-dismiss="modal"
@@ -518,7 +539,11 @@
                     class="d-flex justify-content-between align-items-center bg-white rounded-pill p-1 mb-2 bg-opacity-50"
                   >
                     <p class="mb-0 ms-1">Email</p>
-                    <input type="email" class="rounded-pill p-2 w-75" />
+                    <input
+                      id="txt-login-email"
+                      type="email"
+                      class="rounded-pill p-2 w-75"
+                    />
                   </div>
 
                   <div
@@ -526,6 +551,7 @@
                   >
                     <p class="mb-0 ms-1">Password</p>
                     <input
+                      id="txt-login-password"
                       type="password"
                       class="rounded-pill p-2 w-75"
                       required
@@ -542,7 +568,7 @@
                     </button>
                     <button
                       id="btn-login-form"
-                      type="submit"
+                      type="button"
                       class="btn btn-success rounded-pill m-2"
                     >
                       Login
@@ -574,6 +600,7 @@
           <div class="modal-body vh-100 bg-layer">
             <div class="modal-header border-bottom-0">
               <button
+                id="btn-profile-close"
                 type="button"
                 class="btn-close btn-close-white"
                 data-bs-dismiss="modal"
@@ -835,7 +862,7 @@
                     >
                       <div
                         id="profile-item-container"
-                        class="d-flex flex-column align-items-center row-gap-2 h-75 w-100 pe-4 pt-2"
+                        class="d-flex flex-column align-items-center row-gap-2 h-75 w-100 pe-1 pt-2"
                       >
                         <div
                           class="profile-item d-flex justify-content-between align-items-center column-gap-3"
@@ -878,7 +905,7 @@
                         >
                           <p class="m-0 w-25">Birthday</p>
                           <input
-                            id="txt-profile-bday"
+                            id="txt-profile-birthday"
                             class="form-control"
                             type="date"
                           />
@@ -909,16 +936,24 @@
                       </div>
 
                       <div
-                        class="h-50 pt-1 ps-1 me-5 ms-2 d-flex justify-content-end align-items-center"
+                        class="h-50 pt-1 ps-1 me-4 ms-2 d-flex justify-content-end align-items-center"
                       >
                         <div
                           class="d-flex justify-content-end align-items-center row-gap-2 column-gap-2"
                         >
-                          <button type="button" class="btn btn-danger">
-                            Delete Profile
+                          <button
+                            id="btn-profile-delete"
+                            type="button"
+                            class="btn btn-danger"
+                          >
+                            Delete
                           </button>
-                          <button type="button" class="btn btn-warning">
-                            Update Profile
+                          <button
+                            id="btn-profile-update"
+                            type="button"
+                            class="btn btn-warning"
+                          >
+                            Update
                           </button>
                         </div>
                       </div>

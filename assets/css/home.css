@@ -27,7 +27,7 @@ html::-webkit-scrollbar {
 /* Backlayer Styling */
 
 .bg-layer {
-  background-image: url(../assets/images/background.png);
+  background-image: url(../images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -53,7 +53,7 @@ html::-webkit-scrollbar {
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  background-image: url(../assets/icons/hamburger.svg);
+  background-image: url(../icons/hamburger.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -307,7 +307,7 @@ html::-webkit-scrollbar {
 }
 
 .btn-item-add {
-  background-image: url(../assets/icons/add.svg);
+  background-image: url(../icons/add.svg);
   background-size: cover;
   background-color: transparent;
   background-color: #ff69288f;
@@ -357,7 +357,7 @@ html::-webkit-scrollbar {
 #responsive-cart {
   border-radius: 32px;
   border: 2px solid rgba(0, 0, 0, 0.73);
-  background: rgba(255, 255, 255, 0.29) url(../assets/images/background.png);
+  background: rgba(255, 255, 255, 0.29) url(../images/background.png);
   backdrop-filter: blur(20px);
   height: 100%;
 }
@@ -425,7 +425,7 @@ html::-webkit-scrollbar {
 }
 
 #btn-minus {
-  background-image: url(../assets/icons/minusbtn.svg);
+  background-image: url(../icons/minusbtn.svg);
   background-size: cover;
   border: none;
   width: 18px;
@@ -434,7 +434,7 @@ html::-webkit-scrollbar {
 }
 
 #btn-plus {
-  background-image: url(../assets/icons/plusbtn.svg);
+  background-image: url(../icons/plusbtn.svg);
   background-size: cover;
   border: none;
   width: 18px;
@@ -488,7 +488,7 @@ html::-webkit-scrollbar {
 
 #register-form-model,
 #login-form-model {
-  background-image: url(../assets/images/login_background.png);
+  background-image: url(../images/login_background.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -611,7 +611,7 @@ html::-webkit-scrollbar {
 #responsive-profile {
   border-radius: 32px 0 0 0;
   border: 2px solid rgba(0, 0, 0, 0.73);
-  background: rgba(255, 255, 255, 0.29) url(../assets/images/background.png);
+  background: rgba(255, 255, 255, 0.29) url(../images/background.png);
   backdrop-filter: blur(20px);
   height: 100%;
   margin-top: 4.5rem;
@@ -644,8 +644,43 @@ html::-webkit-scrollbar {
 }
 
 .delete-icon {
-  background-image: url(../assets/icons/delete_icon.svg);
+  background-image: url(../icons/delete_icon.svg);
   background-size: cover;
   width: 25px;
   height: 25px;
+}
+
+.txt-welcome {
+  color: #000;
+  color: #161a16;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+}
+
+.txt-date-time {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.92px;
+}
+
+#profile-icon:hover {
+  cursor: pointer;
+}
+
+.profile-btn-bg {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
