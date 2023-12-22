@@ -6,13 +6,13 @@ export function saveCustomer(customer) {
   const customers = new Map(JSON.parse(sessionStorage.getItem("customers")));
   customers.set(customer.customerId, customer);
 
-  console.log(customers);
-
   sessionStorage.setItem(
     "customers",
     JSON.stringify(Array.from(customers.entries()))
   );
 
+  const customerData = { email: customer.email, password: customer.password };
+  sessionStorage.setItem("loggedUser", JSON.stringify(customerData));
   return true;
 }
 
@@ -37,6 +37,7 @@ export function verifyCustomer(customerLoginData) {
       customer.email === customerLoginData.email &&
       customer.password === customerLoginData.password
     ) {
+      sessionStorage.setItem("loggedUser", JSON.stringify(customerLoginData));
       return true;
     }
   }

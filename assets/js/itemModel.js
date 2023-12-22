@@ -49,6 +49,7 @@ function createProductCard(product) {
   const itemImage = document.createElement("div");
   itemImage.id = "item-image";
   itemImage.innerHTML = `<img class="img-fluid" src="${product.image}" alt="item-image" />`;
+  itemImage.setAttribute("loading", "lazy");
   itemCard.appendChild(itemImage);
 
   // Create and append the item name
@@ -150,17 +151,19 @@ export function updateOrderBill() {
   if (orderItems.length > 0) {
     let totalPrice = 0;
     let discountPrice = 0;
+
     orderItems.forEach((item) => {
       item[1].qty = Number.parseInt(
         document.getElementById(`${item[1].productId}-qty`).innerText
       );
+
       totalPrice += item[1].price * item[1].qty;
       discountPrice += (item[1].discount / 100) * item[1].price * item[1].qty;
     });
 
     billSubtotal.innerText = totalPrice;
-    billDiscount.innerText = discountPrice;
-    billTotal.innerText = totalPrice - discountPrice;
+    billDiscount.innerText = Math.floor(discountPrice);
+    billTotal.innerText = Math.floor(totalPrice - discountPrice);
   } else {
     billSubtotal.innerText = 0;
     billDiscount.innerText = 0;

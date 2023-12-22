@@ -1,4 +1,5 @@
 import { getAllProduct, getAllProductByCategory } from "./itemModel.js";
+import { getNextOrderID, saveOrder } from "./placeOrderModel.js";
 
 import {
   saveCustomer,
@@ -38,9 +39,12 @@ btnOrderNow.addEventListener("click", () => {
   animateitems.forEach(removeElement);
   document.body.style.overflow = "hidden";
   placeOrderView.classList.remove("d-none");
-
   loadItemCards();
 });
+
+window.onload = () => {
+  sessionStorage.setItem("loggedUser", "");
+};
 
 // Loading products list
 
@@ -340,6 +344,7 @@ function deleteCustomer() {
   if (deleteCustomerDetails(customerEmail, customerPassword)) {
     alert("Customer deleted successfully");
     changeStatusToUnregistered();
+    location.reload();
     return;
   }
 
@@ -351,4 +356,62 @@ function changeStatusToUnregistered() {
   document.getElementById("navbarToggler").innerHTML = "";
   document.getElementById("navbarToggler").appendChild(getRegisterComponent());
   document.getElementById("btn-profile-close").click();
+}
+
+// Place Order function
+
+const btnPlaceOrder = document.getElementById("btn-place-order");
+btnPlaceOrder.addEventListener("click", () => {
+  placeOrder();
+});
+
+function placeOrder() {
+  const orderItemsQty = parseInt(sessionStorage.getItem("orderItemIndex"));
+  let customer = null;
+
+  try {
+    customer = JSON.parse(sessionStorage.getItem("loggedUser"));
+  } catch (error) {}
+
+  if (customer === undefined || customer === null) {
+    alert("Please Register or Login to order");
+    return;
+  } else if (orderItemsQty <= 0) {
+    alert("Please add items to order");
+    return;
+  }
+
+  if (orderItemsQty > 0 && customer != null) {
+    const orderItems = new Map(
+      JSON.parse(sessionStorage.getItem("orderItems"))
+    );
+
+    const newOrderId = getNextOrderID();
+
+    const orderTotal = parseFloat(
+      document.getElementById("bill-total").innerText
+    );
+    const orderDiscount = parseFloat(
+      document.getElementById("bill-discount").innerText
+    );
+
+    // orderItems.forEach((item) => {
+    //   console.log(item);
+    // });
+
+    //Need to create a function to extract data from the orderItems
+
+    const order = {
+      orderId: newOrderId,
+      customerDetails: customer,
+      timestamp: new Date().toLocaleString(),
+      itemList: orderItems,
+      total: orderTotal,
+      discount: orderDiscount,
+    };
+
+    if (saveOrder(newOrderId, order)) {
+      alert("Order placed successfully!");
+    }
+  }
 }
